@@ -1,0 +1,161 @@
+/* General Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6; /* Light cool gray */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background: linear-gradient(135deg, #6a5acd, #8ecae6); /* Soft purple to light blue gradient */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #6a5acd; /* Soft purple */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+nav button {
+    background-color: #8ecae6; /* Light blue */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+nav button:hover {
+    background-color: #6a5acd; /* Switch to soft purple on hover */
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav button.active {
+    background-color: #6a5acd; /* Highlight active button */
+    color: #fff;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+}
+
+/* Login Section Styling */
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #ffffff, #f0f8ff); /* White to very light blue gradient */
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#login:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styling */
+#login h2 {
+    margin-bottom: 20px;
+    color: #2f3e46; /* Neutral dark gray-green */
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+#login input[type="text"],
+#login input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e0; /* Soft gray-blue border */
+    border-radius: 8px;
+    background: #ffffff; /* Clean white */
+    font-size: 1rem;
+    color: #2f3e46;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#login input[type="text"]:focus,
+#login input[type="password"]:focus {
+    border-color: #8ecae6; /* Focus light blue border */
+    box-shadow: 0px 6px 12px rgba(142, 202, 230, 0.3);
+    outline: none;
+}
+
+/* Submit Button */
+#login button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #6a5acd, #8ecae6); /* Soft purple to light blue gradient */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#login button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #5c4baf, #6fc7e4); /* Slightly darker tones */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #login {
+        padding: 20px;
+    }
+
+    #login h2 {
+        font-size: 1.6rem;
+    }
+}
